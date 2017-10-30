@@ -1,4 +1,19 @@
+```console
+$ kubectl get pods,svc
+NAME                                       READY     STATUS    RESTARTS   AGE
+po/echoserver-848b75d85-hshcq              1/1       Running   0          2m
+po/nginx-7c87f569d-gxftw                   1/1       Running   0          5m
+po/voyager-test-ingress-55f9b58b8f-vpfmx   1/1       Running   0          1m
 
+NAME                       CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
+svc/kubernetes             10.0.0.1     <none>        443/TCP        7m
+svc/rest                   10.0.0.188   <none>        80/TCP         2m
+svc/voyager-test-ingress   10.0.0.216   <nodes>       80:31656/TCP   1m
+svc/web                    10.0.0.11    <none>        80/TCP         5m
+
+$ minikube ip
+192.168.99.100
+```
 
 
 ```console
