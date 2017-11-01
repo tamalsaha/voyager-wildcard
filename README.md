@@ -1,3 +1,7 @@
+1. First deploy the test servers using ./deploy-servers.sh script. 
+
+2. Now, create an Ingress object running `kubectl apply -f ing.yaml`
+
 ```console
 $ kubectl get pods,svc
 NAME                                       READY     STATUS    RESTARTS   AGE
