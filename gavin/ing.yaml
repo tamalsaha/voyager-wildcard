@@ -3,18 +3,20 @@ kind: Ingress
 metadata:
   name: g-example-ingress
   namespace: default
-  annotations:
-    ingress.appscode.com/type: NodePort
-    ingress.appscode.com/force-service-port: "true"
 spec:
+  tls:
+  - hosts:
+    - '*.g.kiteci.com'
+    - sysapi.kiteci.com
+    secretName: tls-kitecicom
   rules:
-  - host: '*.g.example.com'
+  - host: '*.g.kiteci.com'
     http:
       paths:
       - backend:
           serviceName: orangesys-kong-proxy
           servicePort: 80
-  - host: sysapi.example.com
+  - host: sysapi.kiteci.com
     http:
       paths:
       - backend:
