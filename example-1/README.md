@@ -1,6 +1,13 @@
-1. First deploy the test servers using ./deploy-servers.sh script. 
+1. Deploy voyager operator.
 
-2. Now, create an Ingress object running `kubectl apply -f ing.yaml`
+```console
+curl -fsSL https://raw.githubusercontent.com/appscode/voyager/5.0.0-rc.7/hack/deploy/voyager.sh \
+    | bash -s -- --provider=minikube
+```
+
+2. First deploy the test servers using ./deploy-servers.sh script.
+
+3. Now, create an Ingress object running `kubectl apply -f ing.yaml`
 
 ```console
 $ kubectl get pods,svc
