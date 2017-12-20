@@ -2,7 +2,7 @@
 
 ```console
 curl -fsSL https://raw.githubusercontent.com/appscode/voyager/5.0.0-rc.7/hack/deploy/voyager.sh \
-    | bash -s -- --provider=minikube
+    | bash -s -- --provider=gke
 ```
 
 2. First deploy the test servers using ./deploy-servers.sh script.
