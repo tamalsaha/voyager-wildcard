@@ -1,0 +1,22 @@
+apiVersion: voyager.appscode.com/v1beta1
+kind: Ingress
+metadata:
+  name: g-example-ingress
+  namespace: default
+  annotations:
+    ingress.appscode.com/type: NodePort
+    ingress.appscode.com/force-service-port: "true"
+spec:
+  rules:
+  - host: '*.g.example.com'
+    http:
+      paths:
+      - backend:
+          serviceName: orangesys-kong-proxy
+          servicePort: 80
+  - host: sysapi.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: sys-orangeapi
+          servicePort: 80
