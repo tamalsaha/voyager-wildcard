@@ -1,0 +1,24 @@
+apiVersion: voyager.appscode.com/v1beta1
+kind: Ingress
+metadata:
+  name: g-example-ingress
+  namespace: default
+spec:
+  tls:
+  - hosts:
+    - '*.g.kiteci.com'
+    - sysapi.kiteci.com
+    secretName: tls-kitecicom
+  rules:
+  - host: '*.g.kiteci.com'
+    http:
+      paths:
+      - backend:
+          serviceName: orangesys-kong-proxy
+          servicePort: 80
+  - host: sysapi.kiteci.com
+    http:
+      paths:
+      - backend:
+          serviceName: sys-orangeapi
+          servicePort: 80

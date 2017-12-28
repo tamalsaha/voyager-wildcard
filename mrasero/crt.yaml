@@ -1,0 +1,15 @@
+apiVersion: voyager.appscode.com/v1beta1
+kind: Certificate
+metadata:
+  name: kitecicom
+  namespace: default
+spec:
+  domains:
+  - app1.g.kiteci.com
+  - app2.g.kiteci.com
+  - sysapi.kiteci.com
+  acmeUserSecretName: acme-account
+  challengeProvider:
+    dns:
+      provider: gce
+      credentialSecretName: voyager-gce
