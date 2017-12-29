@@ -9,7 +9,7 @@ Then update voyager-operator deployment in kube-system namespace to change image
 
 2. First deploy the test servers using ./deploy-servers.sh script.
 
-3. Now, create an Ingress object running `kubectl apply -f ing.yaml`
+3. Now, create an Ingress object running `kubectl apply -f ing-http.yaml`
 
 ```console
 $ kubectl get pods,svc
