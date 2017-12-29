@@ -1,7 +1,7 @@
 1. Deploy voyager operator.
 
 ```console
-curl -fsSL https://raw.githubusercontent.com/appscode/voyager/5.0.0-rc.8/hack/deploy/voyager.sh \
+curl -fsSL https://raw.githubusercontent.com/appscode/voyager/5.0.0-rc.10/hack/deploy/voyager.sh \
     | bash -s -- --provider=minikube
 ```
 
