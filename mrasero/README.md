@@ -43,7 +43,7 @@ kubectl apply -f crt.yaml
 
 
 Visit URLs:
- - kiteci.com
- - app1.kiteci.com
- - app2.kiteci.com
- - www.kiteci.com
+ - http://kiteci.com
+ - http://app1.kiteci.com
+ - http://app2.kiteci.com
+ - http://www.kiteci.com
