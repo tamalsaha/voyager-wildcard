@@ -41,6 +41,11 @@ kubectl create secret generic acme-account \
 kubectl apply -f crt.yaml
 ```
 
+6. Update Ingress to add `spec.tls` fields.
+
+```console
+kubectl apply -f ing-https.yaml
+```
 
 Visit URLs:
  - http://kiteci.com
