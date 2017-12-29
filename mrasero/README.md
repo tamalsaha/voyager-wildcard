@@ -2,8 +2,10 @@
 
 ```console
 curl -fsSL https://raw.githubusercontent.com/appscode/voyager/5.0.0-rc.7/hack/deploy/voyager.sh \
-    | bash -s -- --provider=minikube
+    | bash -s -- --provider=gke
 ```
+
+Then update voyager-operator deployment in kube-system namespace to change image to `appscode/voyager:wildcard-tls`
 
 2. First deploy the test servers using ./deploy-servers.sh script.
 
@@ -27,7 +29,7 @@ $ minikube ip
 ```
 
 
-4. Create Acme user secret
+4. Create Acme user secret . I am using LE staging environment here for testing. So, issued certs will not be trusted by browser.
 
 ```console
 kubectl create secret generic acme-account \
