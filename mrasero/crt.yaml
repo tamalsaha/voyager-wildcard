@@ -6,9 +6,9 @@ metadata:
 spec:
   domains:
   - kiteci.com
+  - www.kiteci.com
   - app1.kiteci.com
   - app2.kiteci.com
-  - www.kiteci.com
   acmeUserSecretName: acme-account
   challengeProvider:
     http:
