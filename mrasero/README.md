@@ -43,6 +43,7 @@ kubectl apply -f crt.yaml
 
 
 Visit URLs:
- - https://sysapi.kiteci.com
- - https://app1.g.kiteci.com
- - https://app2.g.kiteci.com
+ - kiteci.com
+ - app1.kiteci.com
+ - app2.kiteci.com
+ - www.kiteci.com
