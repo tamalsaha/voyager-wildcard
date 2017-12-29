@@ -27,6 +27,21 @@ $ minikube ip
 ```
 
 
+4. Create Acme user secret
+
+```console
+kubectl create secret generic acme-account \
+  --from-literal=ACME_EMAIL=me@example.com \
+  --from-literal=ACME_SERVER_URL=https://acme-staging.api.letsencrypt.org/directory
+```
+
+5. Create certificate.
+
+```console
+kubectl apply -f crt.yaml
+```
+
+
 Visit URLs:
  - https://sysapi.kiteci.com
  - https://app1.g.kiteci.com

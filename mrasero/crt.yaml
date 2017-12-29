@@ -5,11 +5,14 @@ metadata:
   namespace: default
 spec:
   domains:
-  - app1.g.kiteci.com
-  - app2.g.kiteci.com
-  - sysapi.kiteci.com
+  - kiteci.com
+  - app1.kiteci.com
+  - app2.kiteci.com
+  - web.kiteci.com
   acmeUserSecretName: acme-account
   challengeProvider:
-    dns:
-      provider: gce
-      credentialSecretName: voyager-gce
+    http:
+      ingress:
+        apiVersion: voyager.appscode.com/v1beta1
+        kind: Ingress
+        name: test-ingress
