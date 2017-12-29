@@ -4,10 +4,6 @@ metadata:
   name: test-ingress
   namespace: default
 spec:
-  tls:
-  - hosts:
-    - '*'
-    secretName: tls-kitecicom
   rules:
   - host: '*'
     http:
@@ -15,3 +11,7 @@ spec:
       - backend:
           serviceName: web
           servicePort: 80
+  tls:
+  - hosts:
+    - '*'
+    secretName: tls-kitecicom
